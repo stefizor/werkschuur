@@ -24,8 +24,8 @@
       }
     ],
     "paths": {
-      "/v1/Example": {
-        "get": {
+      "/forza/orchestrator/FZP_GetVendorInformation": {
+        "post": {
           "summary": "Example summary",
           "operationId": "Example",
           "responses": {
@@ -36,7 +36,7 @@
                   "schema": {
                     "type": "array",
                     "items": {
-                      "$ref": "#/components/schemas/Example"
+                      "$ref": "#/components/schemas/vendor"
                     }
                   }
                 }
