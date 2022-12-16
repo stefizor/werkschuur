@@ -1,200 +1,193 @@
 {
     "openapi": "3.0.1",
     "info": {
-        "title": "SAP oData service API",
-        "description": "SAP offers business software. This connector will help you connect to the SAP oData services. ",
-        "contact": {
-            "email": "info@bettyblocks.com"
-        },
-    "license": {
-      "name": "Apache 2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+      "title": "SAP oData service API",
+      "description": "SAP offers business software. This connector will help you connect to the SAP oData services. ",
+      "contact": {
+        "email": "info@bettyblocks.com"
+      },
+      "license": {
+        "name": "Apache 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+      },
+      "version": "1.0.0"
     },
-    "version": "1.0.0"
-  },
-  "servers": [
-    {
-      "url": "https://example.betty.app/api/runtime"
-    },
-        "host": "https://viva-api-sit.vivaenergy.com.au",
-        "tags": [
-            {
-                "name": "vendor",
-                "description": "Information on vendors"
-            }
-        ],
-        "paths": {
-            "/forza/orchestrator/FZP_GetVendorInformation": {
-                "post": {
-                    "tags": [
-                        "vendor"
-                    ],
-                    "summary": "Vendor summary",
-                    "operationId": "getVendorInfo",
-                    "responses": {
-                        "200": {
-                            "description": "Valid response",
-                            "content": {
-                                "application/json": {
-                                    "schema": {
-                                        "type": "array",
-                                        "items": {
-                                            "$ref": "#/components/schemas/vendor"
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "security": [
-                        {
-                            "api_key": [
-                                "write:users",
-                                "read:users"
-                            ]
-                        }
-                    ]
-                }
-            }
-        },
-        "components": {
-            "schemas": {
-                "vendor": {
-                    "type": "object",
-                    "properties": {
-                        "Company Name": {
-                            "type": "string"
-                        },
-                        "Tax Id": {
-                            "type": "string"
-                        },
-                        "Address Line 1": {
-                            "type": "string"
-                        },
-                        "Address Line 2": {
-                            "type": "string"
-                        },
-                        "City": {
-                            "type": "string"
-                        },
-                        "State": {
-                            "type": "string"
-                        },
-                        "Postal Code": {
-                            "type": "string"
-                        },
-                        "Country": {
-                            "type": "string"
-                        },
-                        "Legal Status": {
-                            "type": "string"
-                        },
-                        "Spend category": {
-                            "type": "string"
-                        },
-                        "Bank Account Name": {
-                            "type": "string"
-                        },
-                        "Trading Name": {
-                            "type": "string"
-                        },
-                        "Prefix Phone Number": {
-                            "type": "string"
-                        },
-                        "Phone Number": {
-                            "type": "string"
-                        },
-                        "AP Rem Email Address": {
-                            "type": "string"
-                        },
-                        "AP Contact Email Address": {
-                            "type": "string"
-                        },
-                        "PO Contact Email Address": {
-                            "type": "string"
-                        },
-                        "Payment Method": {
-                            "type": "string"
-                        },
-                        "Invoice Currency": {
-                            "type": "string"
-                        },
-                        "Tax Area": {
-                            "type": "string"
-                        },
-                        "Modern Slavery Act": {
-                            "type": "string"
-                        },
-                        "BSB Number": {
-                            "type": "string"
-                        },
-                        "Bank Account Number": {
-                            "type": "string"
-                        },
-                        "Bank Description": {
-                            "type": "string"
-                        },
-                        "Bank Country": {
-                            "type": "string"
-                        },
-                        "Office Address Line 1": {
-                            "type": "string"
-                        },
-                        "Office Address Line 2": {
-                            "type": "string"
-                        },
-                        "Office City": {
-                            "type": "string"
-                        },
-                        "Office State": {
-                            "type": "string"
-                        },
-                        "Office Country": {
-                            "type": "string"
-                        },
-                        "Office Postal Code": {
-                            "type": "string"
-                        },
-                        "DUNS_Seg1": {
-                            "type": "string"
-                        },
-                        "DUNS_Seg2": {
-                            "type": "string"
-                        },
-                        "DUNS_Seg3": {
-                            "type": "string"
-                        },
-                        "CatCode29": {
-                            "type": "string"
-                        },
-                        "CatCode30": {
-                            "type": "string"
-                        },
-                        "Vendor Number": {
-                            "type": "string"
-                        },
-                        "IBAN": {
-                            "type": "string"
-                        },
-                        "SWIFT Code": {
-                            "type": "string"
-                        },
-                        "PaymentTerms": {
-                            "type": "string"
-                        }
-                    },
-                    "xml": {
-                        "name": "Device"
+    "servers": [
+      {
+        "url": "https://example.betty.app/api/runtime"
+      }
+    ],
+    "tags": [
+      {
+        "name": "vendor",
+        "description": "vendor"
+      }
+    ],
+    "paths": {
+      "/v1/Example": {
+        "get": {
+          "summary": "Example summary",
+          "operationId": "Example",
+          "responses": {
+            "200": {
+              "description": "Valid response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Example"
                     }
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "api_key": ["write:users", "read:users"]
+            }
+          ]
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "vendor": {
+            "type": "object",
+            "properties": {
+                "Company Name": {
+                    "type": "string"
+                },
+                "Tax Id": {
+                    "type": "string"
+                },
+                "Address Line 1": {
+                    "type": "string"
+                },
+                "Address Line 2": {
+                    "type": "string"
+                },
+                "City": {
+                    "type": "string"
+                },
+                "State": {
+                    "type": "string"
+                },
+                "Postal Code": {
+                    "type": "string"
+                },
+                "Country": {
+                    "type": "string"
+                },
+                "Legal Status": {
+                    "type": "string"
+                },
+                "Spend category": {
+                    "type": "string"
+                },
+                "Bank Account Name": {
+                    "type": "string"
+                },
+                "Trading Name": {
+                    "type": "string"
+                },
+                "Prefix Phone Number": {
+                    "type": "string"
+                },
+                "Phone Number": {
+                    "type": "string"
+                },
+                "AP Rem Email Address": {
+                    "type": "string"
+                },
+                "AP Contact Email Address": {
+                    "type": "string"
+                },
+                "PO Contact Email Address": {
+                    "type": "string"
+                },
+                "Payment Method": {
+                    "type": "string"
+                },
+                "Invoice Currency": {
+                    "type": "string"
+                },
+                "Tax Area": {
+                    "type": "string"
+                },
+                "Modern Slavery Act": {
+                    "type": "string"
+                },
+                "BSB Number": {
+                    "type": "string"
+                },
+                "Bank Account Number": {
+                    "type": "string"
+                },
+                "Bank Description": {
+                    "type": "string"
+                },
+                "Bank Country": {
+                    "type": "string"
+                },
+                "Office Address Line 1": {
+                    "type": "string"
+                },
+                "Office Address Line 2": {
+                    "type": "string"
+                },
+                "Office City": {
+                    "type": "string"
+                },
+                "Office State": {
+                    "type": "string"
+                },
+                "Office Country": {
+                    "type": "string"
+                },
+                "Office Postal Code": {
+                    "type": "string"
+                },
+                "DUNS_Seg1": {
+                    "type": "string"
+                },
+                "DUNS_Seg2": {
+                    "type": "string"
+                },
+                "DUNS_Seg3": {
+                    "type": "string"
+                },
+                "CatCode29": {
+                    "type": "string"
+                },
+                "CatCode30": {
+                    "type": "string"
+                },
+                "Vendor Number": {
+                    "type": "string"
+                },
+                "IBAN": {
+                    "type": "string"
+                },
+                "SWIFT Code": {
+                    "type": "string"
+                },
+                "PaymentTerms": {
+                    "type": "string"
                 }
             },
-            "securitySchemes": {
-                "api_key": {
-                    "type": "apiKey",
-                    "name": "api_key",
-                    "in": "header"
-                }
+            "xml": {
+                "name": "Device"
             }
         }
+    },
+      "securitySchemes": {
+        "api_key": {
+          "type": "apiKey",
+          "name": "api_key",
+          "in": "header"
+        }
+      }
     }
-}
+  }
