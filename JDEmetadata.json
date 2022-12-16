@@ -14,7 +14,7 @@
     },
     "servers": [
       {
-        "url": "https://example.betty.app/api/runtime"
+        "url": "https://viva-api-sit.vivaenergy.com.au"
       }
     ],
     "tags": [
