@@ -43,11 +43,12 @@
               }
             }
           },
-          "security": [
+        "security": [
             {
-              "api_key": ["write:users", "read:users"]
+                "appKey": [],
+                "appId": []
             }
-          ]
+        ]
         }
       }
     },
@@ -183,11 +184,16 @@
         }
     },
       "securitySchemes": {
-        "api_key": {
+        "appID": {
           "type": "apiKey",
-          "name": "api_key",
+          "name": "app_id",
           "in": "header"
-        }
+        },
+        "appKey": {
+            "type": "apiKey",
+            "name": "app_key",
+            "in": "header"
+          }
       }
     }
   }
