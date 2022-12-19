@@ -12,11 +12,6 @@
       },
       "version": "1.0.0"
     },
-    "servers": [
-      {
-        "url": "https://viva-api-sit.vivaenergy.com.au"
-      }
-    ],
     "tags": [
       {
         "name": "vendor",
