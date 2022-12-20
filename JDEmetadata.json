@@ -51,131 +51,140 @@
       "schemas": {
         "vendor": {
             "type": "object",
-            "properties": {
-                "Company Name": {
-                    "type": "string"
+                "properties": {
+                    "id": {
+                        "type": "string"
+                        },
+                    "createdAt": {
+                        "type": "string"
+                        },
+                    "updatedAt": {
+                        "type": "string"
+                        },
+                    "companyName": {
+                        "type": "string"
+                        },
+                    "taxId": {
+                        "type": "string"
+                        },
+                    "addressLine1": {
+                        "type": "string"
+                        },
+                    "addressLine2": {
+                        "type": "string"
+                        },
+                    "city": {
+                        "type": "string"
+                        },
+                    "state": {
+                        "type": "string"
+                        },
+                    "postalCode": {
+                        "type": "string"
+                        },
+                    "country": {
+                        "type": "string"
+                        },
+                    "legalStatus": {
+                        "type": "string"
+                        },
+                    "spendCategory": {
+                        "type": "string"
+                        },
+                    "bankAccountName": {
+                        "type": "string"
+                        },
+                    "tradingName": {
+                        "type": "string"
+                        },
+                    "prefixPhoneNumber": {
+                        "type": "string"
+                        },
+                    "phoneNumber": {
+                        "type": "string"
+                        },
+                    "apRemEmailAddress": {
+                        "type": "string"
+                        },
+                    "apContactEmailAddress": {
+                        "type": "string"
+                        },
+                    "poContactEmailAddress": {
+                        "type": "string"
+                        },
+                    "paymentMethod": {
+                        "type": "string"
+                        },
+                    "invoiceCurrency": {
+                        "type": "string"
+                        },
+                    "taxArea": {
+                        "type": "string"
+                        },
+                    "modernSlaveryAct": {
+                        "type": "string"
+                        },
+                    "bsbNumber": {
+                        "type": "string"
+                        },
+                    "bankAccountNumber": {
+                        "type": "string"
+                        },
+                    "bankDescription": {
+                        "type": "string"
+                        },
+                    "bankCountry": {
+                        "type": "string"
+                        },
+                    "officeAddressLine1": {
+                        "type": "string"
+                        },
+                    "officeAddressLine2": {
+                        "type": "string"
+                        },
+                    "officeCity": {
+                        "type": "string"
+                        },
+                    "officeState": {
+                        "type": "string"
+                        },
+                    "officeCountry": {
+                        "type": "string"
+                        },
+                    "officePostalCode": {
+                        "type": "string"
+                        },
+                    "dunsSeg1": {
+                        "type": "string"
+                        },
+                    "dunsSeg2": {
+                        "type": "string"
+                        },
+                    "dunsSeg3": {
+                        "type": "string"
+                        },
+                    "catCode29": {
+                        "type": "string"
+                        },
+                    "catCode30": {
+                        "type": "string"
+                        },
+                    "vendorNumber": {
+                        "type": "string"
+                        },
+                    "iban": {
+                        "type": "string"
+                        },
+                    "swiftCode": {
+                        "type": "string"
+                        },
+                    "paymentTerms": {
+                        "type": "string"
+                        }
                 },
-                "Tax Id": {
-                    "type": "string"
-                },
-                "Address Line 1": {
-                    "type": "string"
-                },
-                "Address Line 2": {
-                    "type": "string"
-                },
-                "City": {
-                    "type": "string"
-                },
-                "State": {
-                    "type": "string"
-                },
-                "Postal Code": {
-                    "type": "string"
-                },
-                "Country": {
-                    "type": "string"
-                },
-                "Legal Status": {
-                    "type": "string"
-                },
-                "Spend category": {
-                    "type": "string"
-                },
-                "Bank Account Name": {
-                    "type": "string"
-                },
-                "Trading Name": {
-                    "type": "string"
-                },
-                "Prefix Phone Number": {
-                    "type": "string"
-                },
-                "Phone Number": {
-                    "type": "string"
-                },
-                "AP Rem Email Address": {
-                    "type": "string"
-                },
-                "AP Contact Email Address": {
-                    "type": "string"
-                },
-                "PO Contact Email Address": {
-                    "type": "string"
-                },
-                "Payment Method": {
-                    "type": "string"
-                },
-                "Invoice Currency": {
-                    "type": "string"
-                },
-                "Tax Area": {
-                    "type": "string"
-                },
-                "Modern Slavery Act": {
-                    "type": "string"
-                },
-                "BSB Number": {
-                    "type": "string"
-                },
-                "Bank Account Number": {
-                    "type": "string"
-                },
-                "Bank Description": {
-                    "type": "string"
-                },
-                "Bank Country": {
-                    "type": "string"
-                },
-                "Office Address Line 1": {
-                    "type": "string"
-                },
-                "Office Address Line 2": {
-                    "type": "string"
-                },
-                "Office City": {
-                    "type": "string"
-                },
-                "Office State": {
-                    "type": "string"
-                },
-                "Office Country": {
-                    "type": "string"
-                },
-                "Office Postal Code": {
-                    "type": "string"
-                },
-                "DUNS_Seg1": {
-                    "type": "string"
-                },
-                "DUNS_Seg2": {
-                    "type": "string"
-                },
-                "DUNS_Seg3": {
-                    "type": "string"
-                },
-                "CatCode29": {
-                    "type": "string"
-                },
-                "CatCode30": {
-                    "type": "string"
-                },
-                "Vendor Number": {
-                    "type": "string"
-                },
-                "IBAN": {
-                    "type": "string"
-                },
-                "SWIFT Code": {
-                    "type": "string"
-                },
-                "PaymentTerms": {
-                    "type": "string"
+                "xml": {
+                    "name": "Device"
                 }
-            },
-            "xml": {
-                "name": "Device"
-            }
         }
     },
       "securitySchemes": {
