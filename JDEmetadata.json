@@ -21,11 +21,18 @@
       {
         "name": "vendor",
         "description": "vendor"
+      },
+      {
+        "name": "invoice",
+        "description": "invoice"
       }
     ],
     "paths": {
       "/forza/orchestrator/FZP_GetVendorInformation": {
         "post": {
+            "tags":[
+                "vendor"
+                ],
           "summary": "Example summary",
           "operationId": "Example",
           "responses": {
@@ -53,6 +60,9 @@
       },
       "/forza/orchestrator/FZP_GetVendorInvoices": {
         "post": {
+            "tags":[
+                "invoice"
+                ],
           "summary": "Example summary",
           "operationId": "Example",
           "responses": {
