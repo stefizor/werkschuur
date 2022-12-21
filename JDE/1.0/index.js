@@ -1,6 +1,7 @@
 import camelCase from "lodash/camelCase";
 
 const sapdata = async ({ name, params }) => {
+  // interpret parameters
   const prefixlessName = name.replace("all", "");
   const select = params["select"];
   const info = params["data_source_info"];
@@ -18,7 +19,8 @@ const sapdata = async ({ name, params }) => {
   }).value.toString();//auth[2];
   const username = auth[3];
   const password = auth[4];
-
+  
+// setup body & headers
   const prebody = {
     "username": username,
     "password": password
@@ -40,10 +42,7 @@ const sapdata = async ({ name, params }) => {
     "Content-Type": "application/json",
   };
 
-  // console.log(reqbody)
-  // console.log(reqheaders)
-  // console.log(url)
-
+// do api call
   const response = await fetch(url, {
     method: "POST",
     headers: reqheaders,
@@ -60,9 +59,7 @@ const sapdata = async ({ name, params }) => {
       console.error(err);
     });
 
-  // console.log("Response: ")
-  // console.log(response)
-
+// format results
   const results = response.rows.map((object) => {
     const record = Object.keys(object).reduce(
       (o, k) => {
@@ -78,23 +75,6 @@ const sapdata = async ({ name, params }) => {
     return record
   });
 
-  //vendorinfoblock
-  // const results = [Object.keys(response).reduce(
-  //   (o, k) => {
-  //     o[camelCase(k)] = response[k];
-  //     return o;
-  //   },
-  //   {
-  //     id: response["Vendor Number"],
-  //     createdAt: (new Date(Date.now())).toISOString(),
-  //     updatedAt: (new Date(Date.now())).toISOString(),
-  //   }
-  // )];
-
-  
-
-  // console.log("Results: ")
-  // console.log(results)
 
 
 
