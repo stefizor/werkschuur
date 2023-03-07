@@ -70,15 +70,6 @@
             "Name":{
                 "type": "string"
             },
-            "BSN":{
-                "type": "string"
-            },
-            "Export":{
-                "type": "string"
-            },
-            "Hours":{
-                "type": "string"
-            },
             "StartDate":{
                 "type": "string"
             },
