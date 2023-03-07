@@ -64,43 +64,13 @@
             "LeaveId":{
                 "type": "string"
             },
-            "EmployeeId":{
-                "type": "string"
-            },
             "Name":{
-                "type": "string"
-            },
-            "BSN":{
-                "type": "string"
-            },
-            "Export":{
-                "type": "string"
-            },
-            "Hours":{
                 "type": "string"
             },
             "StartDate":{
                 "type": "string"
             },
             "EndDate":{
-                "type": "string"
-            },
-            "DvId":{
-                "type": "string"
-            },
-            "ModifiedDate":{
-                "type": "string"
-            },
-            "LeaveCode":{
-                "type": "string"
-            },
-            "LeaveDescr":{
-                "type": "string"
-            },
-            "ReasonCode":{
-                "type": "string"
-            },
-            "ReasonDescr":{
                 "type": "string"
             }
         },
