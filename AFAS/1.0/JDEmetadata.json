@@ -85,9 +85,6 @@
             "EndDate":{
                 "type": "string"
             },
-            "DvId":{
-                "type": "string"
-            },
             "ModifiedDate":{
                 "type": "string"
             },
