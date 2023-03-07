@@ -86,7 +86,7 @@
                 "type": "string"
             },
             "DvId":{
-                "type": "int"
+                "type": "string"
             },
             "ModifiedDate":{
                 "type": "string"
