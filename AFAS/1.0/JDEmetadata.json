@@ -25,7 +25,7 @@
   ],
   "paths": {
     "/ProfitRestServices/connectors/Profit_Leaves": {
-      "post": {
+      "get": {
           "tags":[
               "leave"
               ],
