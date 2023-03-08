@@ -71,7 +71,7 @@
                 "type": "string"
             },
             "StartDate":{
-                "type": "datetime"
+                "type": "date"
             },
             "EndDate":{
                 "type": "date"
