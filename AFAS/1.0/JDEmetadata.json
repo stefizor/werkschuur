@@ -62,7 +62,7 @@
           "type": "object",
           "properties":{
             "LeaveId":{
-                "type": "number"
+                "type": "string"
             },
             "EmployeeId":{
                 "type": "string"
