@@ -1,0 +1,50 @@
+{
+  "description": "Forms new string from left and right strings. It is optional to put a seperator inbetween.",
+  "label": "Concat String",
+  "category": "Fizor",
+  "icon": {
+    "color": "Green",
+    "name": "PlusIcon"
+  },
+  "options": [
+    {
+      "meta": {
+        "type": "Text"
+      },
+      "name": "left",
+      "label": "Left",
+      "info": "The left part of the string.",
+      "advanced": false
+    },
+    {
+      "meta": {
+        "type": "Text"
+      },
+      "name": "separator",
+      "label": "Separator",
+      "info": "Optional separator between left and right part.",
+      "advanced": false
+    },
+    {
+      "meta": {
+        "type": "Text"
+      },
+      "name": "right",
+      "label": "Right",
+      "info": "The right part of the string.",
+      "advanced": false
+    },
+    {
+      "meta": {
+        "type": "Output",
+        "output": {
+          "type": "Text"
+        }
+      },
+      "name": "result",
+      "label": "As",
+      "info": "The name of the variable that holds the concatenated string."
+    }
+  ],
+  "yields": "NONE"
+}

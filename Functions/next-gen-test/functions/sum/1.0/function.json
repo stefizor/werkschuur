@@ -1,0 +1,41 @@
+{
+  "description": "Calculates the sum of collection for given property.",
+  "label": "Sum",
+  "category": "Fizor",
+  "icon": {
+    "name": "SumIcon",
+    "color": "Green"
+  },
+  "options": [
+    {
+      "meta": {
+        "type": "Collection"
+      },
+      "name": "collection",
+      "label": "Collection",
+      "info": "The collection for which you want to calculate the sum.",
+      "advanced": false
+    },
+    {
+      "meta": {
+        "type": "Text"
+      },
+      "name": "property",
+      "label": "Property",
+      "info": "The property for which you want to calculate the sum.",
+      "advanced": false
+    },
+    {
+      "meta": {
+        "type": "Output",
+        "output": {
+          "type": "Number"
+        }
+      },
+      "name": "result",
+      "label": "As",
+      "info": "The name of the variable for the calculated sum."
+    }
+  ],
+  "yields": "NONE"
+}

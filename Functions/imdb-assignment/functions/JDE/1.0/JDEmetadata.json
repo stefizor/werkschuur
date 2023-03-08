@@ -1,0 +1,289 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "SAP oData service API",
+      "description": "SAP offers business software. This connector will help you connect to the SAP oData services. ",
+      "contact": {
+        "email": "info@bettyblocks.com"
+      },
+      "license": {
+        "name": "Apache 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+      },
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://viva-api-sit.vivaenergy.com.au"
+      }
+    ],
+    "tags": [
+      {
+        "name": "vendor",
+        "description": "vendor"
+      },
+      {
+        "name": "invoice",
+        "description": "invoice"
+      }
+    ],
+    "paths": {
+      "/forza/orchestrator/FZP_GetVendorInformation": {
+        "post": {
+            "tags":[
+                "vendor"
+                ],
+          "summary": "Example summary",
+          "operationId": "Example",
+          "responses": {
+            "200": {
+              "description": "Valid response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/vendor"
+                    }
+                  }
+                }
+              }
+            }
+          },
+        "security": [
+            {
+                "appKey": [],
+                "appId": []
+            }
+        ]
+        }
+      },
+      "/forza/orchestrator/FZP_GetVendorInvoices": {
+        "post": {
+            "tags":[
+                "invoice"
+                ],
+          "summary": "Example summary",
+          "operationId": "Example",
+          "responses": {
+            "200": {
+              "description": "Valid response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/invoice"
+                    }
+                  }
+                }
+              }
+            }
+          },
+        "security": [
+            {
+                "appKey": [],
+                "appId": []
+            }
+        ]
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "vendor": {
+            "type": "object",
+            "properties": {
+                "companyName": {
+                    "type": "string"
+                },
+                "taxId": {
+                    "type": "string"
+                },
+                "addressLine1": {
+                    "type": "string"
+                },
+                "addressLine2": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "state": {
+                    "type": "string"
+                },
+                "postalCode": {
+                    "type": "string"
+                },
+                "country": {
+                    "type": "string"
+                },
+                "legalStatus": {
+                    "type": "string"
+                },
+                "spendCategory": {
+                    "type": "string"
+                },
+                "bankAccountName": {
+                    "type": "string"
+                },
+                "tradingName": {
+                    "type": "string"
+                },
+                "prefixPhoneNumber": {
+                    "type": "string"
+                },
+                "phoneNumber": {
+                    "type": "string"
+                },
+                "apRemEmailAddress": {
+                    "type": "string"
+                },
+                "apContactEmailAddress": {
+                    "type": "string"
+                },
+                "poContactEmailAddress": {
+                    "type": "string"
+                },
+                "paymentMethod": {
+                    "type": "string"
+                },
+                "invoiceCurrency": {
+                    "type": "string"
+                },
+                "taxArea": {
+                    "type": "string"
+                },
+                "modernSlaveryAct": {
+                    "type": "string"
+                },
+                "bsbNumber": {
+                    "type": "string"
+                },
+                "bankAccountNumber": {
+                    "type": "string"
+                },
+                "bankDescription": {
+                    "type": "string"
+                },
+                "bankCountry": {
+                    "type": "string"
+                },
+                "officeAddressLine1": {
+                    "type": "string"
+                },
+                "officeAddressLine2": {
+                    "type": "string"
+                },
+                "officeCity": {
+                    "type": "string"
+                },
+                "officeState": {
+                    "type": "string"
+                },
+                "officeCountry": {
+                    "type": "string"
+                },
+                "officePostalCode": {
+                    "type": "string"
+                },
+                "dunsSeg1": {
+                    "type": "string"
+                },
+                "dunsSeg2": {
+                    "type": "string"
+                },
+                "dunsSeg3": {
+                    "type": "string"
+                },
+                "catCode29": {
+                    "type": "string"
+                },
+                "catCode30": {
+                    "type": "string"
+                },
+                "vendorNumber": {
+                    "type": "string"
+                },
+                "iban": {
+                    "type": "string"
+                },
+                "swiftCode": {
+                    "type": "string"
+                },
+                "paymentTerms": {
+                    "type": "string"
+                }
+            },
+            "xml": {
+                "name": "Device"
+            }
+        },
+        "invoice": {
+            "type": "object",
+            "properties": {
+                "docco": {
+                    "type": "string"
+                },
+                "docnbr": {
+                    "type": "string"
+                },
+                "doctyp": {
+                    "type": "string"
+                },
+                "supplier": {
+                    "type": "string"
+                },
+                "suppliername": {
+                    "type": "string"
+                },
+                "invoice": {
+                    "type": "string"
+                },
+                "gross": {
+                    "type": "string"
+                },
+                "curr": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "purchaseorder": {
+                    "type": "string"
+                },
+                "invoicedate": {
+                    "type": "string"
+                },
+                "duedate": {
+                    "type": "string"
+                },
+                "comments": {
+                    "type": "string"
+                },
+                "paymentid": {
+                    "type": "string"
+                },
+                "invoicereceiveddate": {
+                    "type": "string"
+                }
+            },
+            "xml": {
+                "name": "Device"
+            }
+        }
+    },
+      "securitySchemes": {
+        "appID": {
+          "type": "apiKey",
+          "name": "app_id",
+          "in": "header"
+        },
+        "appKey": {
+            "type": "apiKey",
+            "name": "app_key",
+            "in": "header"
+          }
+      }
+    }
+  }

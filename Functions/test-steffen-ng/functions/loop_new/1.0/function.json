@@ -1,0 +1,50 @@
+{
+  "description": "Loops through a given collection.",
+  "label": "Loop_number_of_times",
+  "category": "FLOW",
+  "icon": {
+    "name": "LoopIcon",
+    "color": "Blue"
+  },
+  "options": [
+    {
+      "meta": {
+        "type": "Number",
+        "validations": {
+          "required": true
+        }
+      },
+      "name": "jsondb_length",
+      "label": "Input Json DB length",
+      "info": "The length you want to loop through."
+    },
+    {
+      "meta": {
+        "type": "Output",
+        "output": {
+          "type": "Text",
+          "scoped": true
+        },
+        "validations": {
+          "required": true
+        }
+      },
+      "name": "iterator",
+      "label": "Iterator name",
+      "info": "The name for the iterator under which the object of each iteration will be available."
+    },
+    {
+      "meta": {
+        "type": "Output",
+        "output": {
+          "type": "Number",
+          "scoped": true
+        }
+      },
+      "name": "index",
+      "label": "Index",
+      "info": "The name for the variable under which the current iteration will be available. Starts at 0. For example, in the 1st iteration this variable holds the value 0 and in 10th iteration, this variable holds the value 9."
+    }
+  ],
+  "yields": "ALL"
+}

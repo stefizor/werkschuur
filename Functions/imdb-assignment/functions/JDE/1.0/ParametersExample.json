@@ -1,0 +1,68 @@
+
+{
+    "auth_info": {
+        "auth_profile": "59a728ee56814c6fae14417826d9e0b4",
+        "raw_jwt": " eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhcHBfdXVpZCI6IjQ3MTE5YzBiNmI1ODQwMmE5M2JjMGRjODcyMTc5ZGNlIiwiYXVkIjoiSm9rZW4iLCJhdXRoX3Byb2ZpbGUiOiI1OWE3MjhlZTU2ODE0YzZmYWUxNDQxNzgyNmQ5ZTBiNCIsImV4cCI6MTY3MTYyOTI3MywiaWF0IjoxNjcxNjIyMDczLCJpc3MiOiJKb2tlbiIsImp0aSI6IjJzcGNtcXFyOTZlMTNwZnBqbzAwOHVmOCIsImxvY2FsZSI6bnVsbCwibmJmIjoxNjcxNjIyMDczLCJyb2xlcyI6WzEsMl0sInVzZXJfaWQiOjJ9.UREj2PZNgyRO_8ZTSc5-6MU8jvQQ4XHDUCYuDDfBC6RmwE7FqqpbpB-soDsifIjZH1FX1S0nLha7vzSlSW4I9g",
+        "user_id": 2
+    },
+    "conditions": [
+        {
+            "filters": [
+                {
+                    "field": "id",
+                    "operator": "gt",
+                    "value": 1630733
+                },
+                {
+                    "field": "invoice",
+                    "operator": "eq",
+                    "value": "2022-12-20T16:16:40+01:00"
+                }
+            ],
+            "operator": "and"
+        }
+    ],
+    "data_source_info": {
+        "kind": "OpenAPIv3",
+        "model": {
+            "meta_info": {
+                "methods": [
+                    {
+                        "endpoint": "/forza/orchestrator/FZP_GetVendorInvoices",
+                        "many": true,
+                        "method": "post"
+                    }
+                ],
+                "schema_type": "#/components/schemas/invoice"
+            }
+        },
+        "source": {
+            "api_key": "799c6270:bdaae20177f9cc2fa4ae239d74ae2828:101043:ZVENDORPP:wJ16TU^hz#olA!A3FZy$65loim",
+            "host": "https://viva-api-sit.vivaenergy.com.au"
+        }
+    },
+    "input": null,
+    "select": [
+        "gross",
+        "invoicedate",
+        "curr",
+        "invoicereceiveddate",
+        "supplier",
+        "duedate",
+        "id",
+        "docnbr",
+        "doctyp",
+        "paymentid",
+        "invoice",
+        "docco",
+        "comments",
+        "purchaseorder",
+        "suppliername",
+        "status"
+    ],
+    "skip": 0,
+    "sort": null,
+    "take": 5,
+    "total_count": true,
+    "variables": []
+}

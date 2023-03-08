@@ -1,0 +1,32 @@
+{
+  "description": "Calculates the age based on a Date of Birth and today's date.",
+  "label": "Age",
+  "category": "Fizor",
+  "icon": {
+    "name": "UserIcon",
+    "color": "Pink"
+  },
+  "options": [
+    {
+      "meta": {
+        "type": "Text"
+      },
+      "name": "dateOfBirthString",
+      "label": "Date of Birth",
+      "info": "The person's date of birth.",
+      "advanced": false
+    },
+    {
+      "meta": {
+        "type": "Output",
+        "output": {
+          "type": "Number"
+        }
+      },
+      "name": "result",
+      "label": "As",
+      "info": "The name of the variable for the calculated age."
+    }
+  ],
+  "yields": "NONE"
+}

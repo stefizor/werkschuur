@@ -1,0 +1,39 @@
+{
+  "description": "Description",
+  "label": "JDEData",
+  "category": "Misc",
+  "icon": {
+    "color": "Green",
+    "name": "PlusIcon"
+  },
+  "options": [
+    {
+      "meta": {
+        "type": "Text"
+      },
+      "name": "name",
+      "label": "Name",
+      "info": ""
+    },
+    {
+      "meta": {
+        "type": "Object"
+      },
+      "name": "params",
+      "label": "Params",
+      "info": ""
+    },
+    {
+      "meta": {
+        "type": "Output",
+        "output": {
+          "type": "JSON"
+        }
+      },
+      "name": "response",
+      "label": "Result as",
+      "info": ""
+    }
+  ],
+  "yields": "NONE"
+}

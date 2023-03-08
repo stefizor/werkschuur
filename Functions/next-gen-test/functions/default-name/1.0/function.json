@@ -1,0 +1,50 @@
+{
+  "description": "If the user does not supply a name, then this function will compose one based on the left and right parameters.",
+  "label": "Default Name",
+  "category": "Fizor",
+  "icon": {
+    "name": "BugBeetleIcon",
+    "color": "Purple"
+  },
+  "options": [
+    {
+      "meta": {
+        "type": "Text"
+      },
+      "name": "supplied",
+      "label": "Supplied",
+      "info": "The string supplied by the user",
+      "advanced": false
+    },
+    {
+      "meta": {
+        "type": "Text"
+      },
+      "name": "left",
+      "label": "Left",
+      "info": "The left part of the composed string",
+      "advanced": false
+    },
+    {
+      "meta": {
+        "type": "Text"
+      },
+      "name": "right",
+      "label": "Right",
+      "info": "The left part of the composed string",
+      "advanced": false
+    },
+    {
+      "meta": {
+        "type": "Output",
+        "output": {
+          "type": "Text"
+        }
+      },
+      "name": "result",
+      "label": "Result",
+      "info": "The composed or the supplied string"
+    }
+  ],
+  "yields": "NONE"
+}

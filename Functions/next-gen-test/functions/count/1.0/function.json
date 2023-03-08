@@ -1,0 +1,32 @@
+{
+  "description": "Description",
+  "label": "Count",
+  "category": "Fizor",
+  "icon": {
+    "name": "CounterIcon",
+    "color": "Orange"
+  },
+  "options": [
+    {
+      "meta": {
+        "type": "Collection"
+      },
+      "name": "collection",
+      "label": "Collection",
+      "info": "The collection for which you want to count the number of objects",
+      "advanced": false
+    },
+    {
+      "meta": {
+        "type": "Output",
+        "output": {
+          "type": "Number"
+        }
+      },
+      "name": "result",
+      "label": "Result",
+      "info": "The result as a number"
+    }
+  ],
+  "yields": "NONE"
+}
