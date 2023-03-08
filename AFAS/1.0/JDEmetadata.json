@@ -71,10 +71,10 @@
                 "type": "string"
             },
             "StartDate":{
-                "type": "date"
+                "type": "string"
             },
             "EndDate":{
-                "type": "date"
+                "type": "string"
             },
             "ModifiedDate":{
                 "type": "string"
