@@ -62,7 +62,7 @@
           "type": "object",
           "properties":{
             "LeaveId":{
-                "type": "string"
+                "type": "number"
             },
             "EmployeeId":{
                 "type": "string"
@@ -71,10 +71,10 @@
                 "type": "string"
             },
             "StartDate":{
-                "type": "string"
+                "type": "date"
             },
             "EndDate":{
-                "type": "string"
+                "type": "date"
             },
             "ModifiedDate":{
                 "type": "string"
