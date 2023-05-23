@@ -8,7 +8,7 @@
       label: 'Ganttmodule',
       package: 'npm:gantt-task-react@latest',
       imports: ['*'],
-    },
+    }
   ],
   jsx: (() => {
     const {
@@ -20,8 +20,12 @@
 
     // Hier worden alle opties uit de prefab binnengehaald.
     const {
-      model,
-      filter,
+      employee,
+      employee_filter,
+      project,
+      project_filter,
+      project_resource,
+      project_resource_filter,
       task_info,
       hideTaskDate,
       viewMode,
@@ -71,9 +75,8 @@
         listCellWidth={task_info} />
         </div>)
     }
-    //needed for copy
-    var where = useFilter(filter);
-    //copied from datatable.js
+    // START FUNCTION //
+    function query(model,where){
     const {
       loading: queryLoading,
       error,
@@ -95,19 +98,19 @@
           }
         },
         onError(err) {
-          if (!displayError) {
+          
             B.triggerEvent('onError', err);
-          }
+          
         },
       },
       !model,
     );
-
-    console.log(useRelation(
-      model,
-      {},
-      typeof model === 'string' || !model,
-    ));
+      // console.log(model);
+    // console.log(useRelation(
+    //   model,
+    //   {},
+    //   typeof model === 'string' || !model,
+    // ));
 
     const { hasResults, data: relationData } = useRelation(
       model,
@@ -117,45 +120,58 @@
     const data = hasResults ? relationData : queryData;
     const loading = hasResults ? false : queryLoading;
 
-
-    // // Hier doen we een query, op basis van de filter halen we alle records binnen.
-    // var where = useFilter(filter);
-    // var {
-    //   loading,
-    //   error,
-    //   data,
-    //   refetch,
-    // } =
-    //   model &&
-    //   useAllQuery(model, {
-    //     rawFilter: where,
-    //     onCompleted(res) {
-    //       var hasResult = res && res.results && res.results.length > 0;
-    //       if (hasResult) {
-    //         B.triggerEvent('onSuccess', res.results);
-    //       } else {
-    //         B.triggerEvent('onNoResults');
-    //       }
-    //     },
-    //     onError(err) {
-    //       console.log(err, error);
-    //     },
-    //   });
       
     var results = data ? data.results : [];
+      
+    console.log(results);
+    return results;
+    }
+    // END FUNCTION //
+
+    var where = useFilter(employee_filter);
+    // var where = {
+        //   "id": {
+        //     "eq": 1
+        //   }
+        // };
+        console.log(where)
+    var results = query(employee,where);
+
+    // const webuserprojectquery = gql`{
+    //   allWebuser{
+    //     results{
+    //       fullName
+    //       webuserprojects(where: {
+    //         project: {neq: null}
+    //       }){
+    //         hoursAllocated
+    //         project{
+    //           name
+    //         }
+    //       }
+    //     }
+    //   }
+    // }`;
+
+
+    // const { loading, error, data } = useQuery(webuserprojectquery);
+  
+    // if (loading) return 'Loading...';
+  
+    // if (error) return `Error! ${error.message}`;
+  
+    // var results = data ? data.results : [];
 
     console.log(results);
-    // Wat dit doet weet ik niet precies, maar volgens mij is het nodig om het component na de query opnieuw te renderen.
-    // B.defineFunction('Refetch', () => {
-    //   refetch();
-    // });
 
     // Als er geen data is, kunnen we het niet verwerken
-    if (data && data.totalCount > 0){
+    if (results.length > 0){
       // definieer takenlijst
       let tasks = [];
       // ga door alle taken in de data
       for (let entry in results){
+        console.log(results[entry].id);
+        console.log(results[entry].employeeName);
 
         // kies id op basis van type
         let typeId = (results[entry].taskType === "project") ? results[entry].employeeName : results[entry].id;
