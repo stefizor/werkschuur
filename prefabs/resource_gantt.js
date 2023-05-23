@@ -8,17 +8,47 @@
       options: [
         {
           value: '',
-          label: 'Model',
-          key: 'model',
+          label: 'Employee',
+          key: 'employee',
           type: 'MODEL_AND_RELATION',
         },
         {
           value: {},
-          label: 'Filter',
-          key: 'filter',
+          label: 'Employee Filter',
+          key: 'employee_filter',
           type: 'FILTER',
           configuration: {
-            dependsOn: 'model',
+            dependsOn: 'employee',
+          },
+        },
+        {
+          value: '',
+          label: 'Project',
+          key: 'project',
+          type: 'MODEL_AND_RELATION',
+        },
+        {
+          value: {},
+          label: 'Project Filter',
+          key: 'project_filter',
+          type: 'FILTER',
+          configuration: {
+            dependsOn: 'project',
+          },
+        },
+        {
+          value: '',
+          label: 'Project Resource',
+          key: 'project_resource',
+          type: 'MODEL_AND_RELATION',
+        },
+        {
+          value: {},
+          label: 'Project Resource Filter',
+          key: 'project_resource_filter',
+          type: 'FILTER',
+          configuration: {
+            dependsOn: 'project_resource',
           },
         },
         {
